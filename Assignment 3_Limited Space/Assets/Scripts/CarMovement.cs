@@ -18,8 +18,25 @@ public class CarMovement : MonoBehaviour
     {
         float HorizontalInput = Input.GetAxis("Horizontal");
         float VerticalInput = Input.GetAxis("Vertical");
-        CarRb.velocity = new Vector3(VerticalInput * MovementSpeed * Time.deltaTime, 0, 0);
-        //transform.Translate(VerticalInput * MovementSpeed * Time.deltaTime, 0, 0);
-        transform.Rotate(0, HorizontalInput * RotationSpeed * Time.deltaTime, 0);
+
+        transform.Translate(VerticalInput * MovementSpeed * Time.deltaTime, 0, 0);
+
+
+
+        if (VerticalInput == 0)
+        {
+
+        }
+        else
+        {
+            if (VerticalInput > 0)
+            {
+                transform.Rotate(0, HorizontalInput * RotationSpeed * Time.deltaTime, 0);
+            }
+            else
+            {
+                transform.Rotate(0, HorizontalInput * -RotationSpeed * Time.deltaTime, 0);
+            }
+        }        
     }
 }
