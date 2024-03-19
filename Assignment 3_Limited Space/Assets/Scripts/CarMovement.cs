@@ -31,11 +31,13 @@ public class CarMovement : MonoBehaviour
         {
             if (VerticalInput > 0)
             {
+                MovementSpeed = 5f;
                 transform.Rotate(0, HorizontalInput * RotationSpeed * Time.deltaTime, 0);
             }
             else
             {
                 transform.Rotate(0, HorizontalInput * -RotationSpeed * Time.deltaTime, 0);
+                MovementSpeed = 2.4f;
             }
         }        
     }
