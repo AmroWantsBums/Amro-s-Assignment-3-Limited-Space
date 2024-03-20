@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PoliceMovement : MonoBehaviour
 {
+    public float MovementSpeed;
+    public bool Forward = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -12,12 +14,31 @@ public class PoliceMovement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        transform.Translate(1, 0, 0);
+    {        
+        if (Forward)
+        {
+            transform.Translate(1 * MovementSpeed * Time.deltaTime, 0, 0);
+        }
+        else
+        {
+            transform.Translate(-1 * MovementSpeed * Time.deltaTime, 0, 0);
+        }
     }
 
     IEnumerator ChangeDirection()
     {
         yield return new WaitForSeconds(4f);
+        if (Forward)
+        {
+            transform.Rotate(0, 180, 0); 
+            Forward = false;
+            StartCoroutine(ChangeDirection());
+        }
+        else
+        {
+            transform.Rotate(0, 0, 0);
+            Forward = true;
+            StartCoroutine(ChangeDirection());
+        }
     }
 }
