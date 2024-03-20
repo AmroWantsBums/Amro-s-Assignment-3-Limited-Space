@@ -28,15 +28,16 @@ public class PoliceMovement : MonoBehaviour
     IEnumerator ChangeDirection()
     {
         yield return new WaitForSeconds(4f);
+        Debug.Log("Its time");
         if (Forward)
         {
-            transform.Rotate(0, 180, 0); 
+            //transform.Rotate(0, 180, 0); 
             Forward = false;
             StartCoroutine(ChangeDirection());
         }
         else
         {
-            transform.Rotate(0, 0, 0);
+            //transform.Rotate(0, 0, 0);
             Forward = true;
             StartCoroutine(ChangeDirection());
         }
