@@ -5,6 +5,7 @@ using UnityEngine;
 public class PoliceMovement : MonoBehaviour
 {
     public float MovementSpeed;
+    public float TurnTime;
     private bool TimeToTurn = false;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class PoliceMovement : MonoBehaviour
 
     IEnumerator ChangeDirection()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(TurnTime);
         Debug.Log("Its time");
         TimeToTurn = true;
         StartCoroutine(ChangeDirection());
