@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
-    public  Scene LevelScene; 
+    public  Scene LevelScene;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,5 +34,25 @@ public class LevelController : MonoBehaviour
     {
         SceneManager.LoadScene(LevelScene.name);
         Time.timeScale = 1;
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public void LoadLevel1()
+    {
+        SceneManager.LoadScene("Level1");
+    }
+
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene("Level2");
+    }
+
+    public void LoadLevel3()
+    {
+        SceneManager.LoadScene("Level3");
     }
 }
