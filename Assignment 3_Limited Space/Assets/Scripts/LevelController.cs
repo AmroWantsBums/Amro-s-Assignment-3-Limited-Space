@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
+    public  Scene LevelScene; 
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,11 @@ public class LevelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Scene currentScene = SceneManager.GetActiveScene();
+        if (currentScene.name != "DeathScene")
+        {
+            LevelScene = SceneManager.GetActiveScene();
+        }
     }
 
     void OnTriggerEnter(Collider col)
@@ -23,5 +28,11 @@ public class LevelController : MonoBehaviour
         {
             SceneManager.LoadScene("LevelSelect");
         }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(LevelScene.name);
+        Time.timeScale = 1;
     }
 }

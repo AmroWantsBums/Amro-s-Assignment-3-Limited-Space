@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class TrafficCollisionCheck : MonoBehaviour
 {
+    public GameObject DeathCanvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +22,12 @@ public class TrafficCollisionCheck : MonoBehaviour
     {
         if (col.gameObject.name == "Car")
         {
-            Time.timeScale = 0;
-            Debug.Log("you crashed the car");
+            if (Time.timeScale != 0)
+            {
+                Time.timeScale = 0;
+                DeathCanvas.SetActive(true);
+                Debug.Log("you crashed the car");
+            }
         }
     }
 }
