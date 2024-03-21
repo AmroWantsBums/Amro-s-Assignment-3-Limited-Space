@@ -27,7 +27,7 @@ public class PoliceMovement : MonoBehaviour
 
     IEnumerator ChangeDirection()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(19f);
         Debug.Log("Its time");
         if (Forward)
         {
