@@ -215,7 +215,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &141249435
 PrefabInstance:
@@ -224,6 +224,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 783586524}
     m_Modifications:
+    - target: {fileID: 6453407439859527536, guid: db8e7d7827b8649289caff6a526dad73, type: 3}
+      propertyPath: DeathCanvas
+      value: 
+      objectReference: {fileID: 547343578}
     - target: {fileID: 7074562111321806430, guid: db8e7d7827b8649289caff6a526dad73, type: 3}
       propertyPath: m_Name
       value: CarSprite
@@ -250,7 +254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7793205926448335517, guid: db8e7d7827b8649289caff6a526dad73, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7793205926448335517, guid: db8e7d7827b8649289caff6a526dad73, type: 3}
       propertyPath: m_LocalPosition.z
@@ -288,7 +292,9 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6453407439859527536, guid: db8e7d7827b8649289caff6a526dad73, type: 3}
+    - {fileID: 3299707641676139725, guid: db8e7d7827b8649289caff6a526dad73, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: db8e7d7827b8649289caff6a526dad73, type: 3}
 --- !u!1 &173795418
 GameObject:
@@ -384,7 +390,7 @@ PrefabInstance:
     - target: {fileID: -295069673330876340, guid: c190b469617f5415eba60028438d1997, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     - target: {fileID: 1794748795825431705, guid: c190b469617f5415eba60028438d1997, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -462,7 +468,7 @@ PrefabInstance:
     - target: {fileID: 1222855143237152672, guid: 456312eee68284dd091e1dc8946443f8, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     - target: {fileID: 5218082848635966053, guid: 456312eee68284dd091e1dc8946443f8, type: 3}
       propertyPath: m_Name
       value: car-1-2_Prefab
@@ -916,7 +922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 437054, guid: 7be733fca5977484eab72a8eca73b1b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.523
+      value: -0.42
       objectReference: {fileID: 0}
     - target: {fileID: 437054, guid: 7be733fca5977484eab72a8eca73b1b2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1215,7 +1221,7 @@ PrefabInstance:
     - target: {fileID: 4137870858258021200, guid: a3c146124ef3748eebcd3a883c40d225, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3c146124ef3748eebcd3a883c40d225, type: 3}
 --- !u!4 &479308810 stripped
@@ -1297,7 +1303,7 @@ PrefabInstance:
     - target: {fileID: 4137870858258021200, guid: a3c146124ef3748eebcd3a883c40d225, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3c146124ef3748eebcd3a883c40d225, type: 3}
 --- !u!4 &486623500 stripped
@@ -1315,7 +1321,7 @@ PrefabInstance:
     - target: {fileID: 5201713507547706912, guid: 4992e7545462f4ab8907db63d97199b0, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     - target: {fileID: 7621657604627576330, guid: 4992e7545462f4ab8907db63d97199b0, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1504,7 +1510,7 @@ PrefabInstance:
     - target: {fileID: 6453407439859527536, guid: db8e7d7827b8649289caff6a526dad73, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     - target: {fileID: 7074562111321806430, guid: db8e7d7827b8649289caff6a526dad73, type: 3}
       propertyPath: m_Name
       value: car-2-1_Prefab (2)
@@ -1612,7 +1618,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &783586520
 MonoBehaviour:
@@ -1639,8 +1645,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.61}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.2, y: 1.192864, z: 1}
+  m_Center: {x: 0, y: 0.25282797, z: 0}
 --- !u!23 &783586522
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1845,6 +1851,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804410706}
   m_CullTransparentMesh: 1
+--- !u!1 &833675933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7483559100042552377, guid: aa20547dfc1c8104e9a4bb855c15ca97, type: 3}
+  m_PrefabInstance: {fileID: 1732880867}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &833675937
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833675933}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 21.000006, y: 1.3193817, z: 39.000015}
+  m_Center: {x: 0, y: 0.65969086, z: 0}
 --- !u!1001 &852665559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1855,7 +1879,7 @@ PrefabInstance:
     - target: {fileID: 5201713507547706912, guid: 4992e7545462f4ab8907db63d97199b0, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     - target: {fileID: 7621657604627576330, guid: 4992e7545462f4ab8907db63d97199b0, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -1997,7 +2021,7 @@ PrefabInstance:
     - target: {fileID: 4137870858258021200, guid: a3c146124ef3748eebcd3a883c40d225, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3c146124ef3748eebcd3a883c40d225, type: 3}
 --- !u!4 &880662273 stripped
@@ -2015,7 +2039,7 @@ PrefabInstance:
     - target: {fileID: -5634872874466461489, guid: 87ac5ce1df2a64407bd9d0137b2d68b5, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     - target: {fileID: 6627719025246014540, guid: 87ac5ce1df2a64407bd9d0137b2d68b5, type: 3}
       propertyPath: m_Name
       value: car-1-3_Prefab
@@ -2097,7 +2121,7 @@ PrefabInstance:
     - target: {fileID: -295069673330876340, guid: c190b469617f5415eba60028438d1997, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     - target: {fileID: 1794748795825431705, guid: c190b469617f5415eba60028438d1997, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -2175,7 +2199,7 @@ PrefabInstance:
     - target: {fileID: -295069673330876340, guid: c190b469617f5415eba60028438d1997, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     - target: {fileID: 1794748795825431705, guid: c190b469617f5415eba60028438d1997, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -2313,7 +2337,7 @@ PrefabInstance:
     - target: {fileID: 3813114036039003714, guid: f55dbd8ea76a94d5a95325f37acb2aa3, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f55dbd8ea76a94d5a95325f37acb2aa3, type: 3}
 --- !u!4 &1174719813 stripped
@@ -2331,7 +2355,7 @@ PrefabInstance:
     - target: {fileID: -295069673330876340, guid: c190b469617f5415eba60028438d1997, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     - target: {fileID: 1794748795825431705, guid: c190b469617f5415eba60028438d1997, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -2409,7 +2433,7 @@ PrefabInstance:
     - target: {fileID: 5201713507547706912, guid: 4992e7545462f4ab8907db63d97199b0, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     - target: {fileID: 7621657604627576330, guid: 4992e7545462f4ab8907db63d97199b0, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -2487,7 +2511,7 @@ PrefabInstance:
     - target: {fileID: -7638522256284641061, guid: 446e3f7f9f2174ec3a84f90dee8e6d9e, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     - target: {fileID: 3002240810960631417, guid: 446e3f7f9f2174ec3a84f90dee8e6d9e, type: 3}
       propertyPath: m_Name
       value: car-6-2_Prefab (5)
@@ -2625,7 +2649,7 @@ PrefabInstance:
     - target: {fileID: 8202498560127421122, guid: db03f58a3cc564285a46deedfe5e0e7e, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db03f58a3cc564285a46deedfe5e0e7e, type: 3}
 --- !u!4 &1584850831 stripped
@@ -2721,7 +2745,7 @@ PrefabInstance:
     - target: {fileID: 6453407439859527536, guid: db8e7d7827b8649289caff6a526dad73, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     - target: {fileID: 7074562111321806430, guid: db8e7d7827b8649289caff6a526dad73, type: 3}
       propertyPath: m_Name
       value: car-2-1_Prefab (1)
@@ -3004,7 +3028,7 @@ PrefabInstance:
     - target: {fileID: 3813114036039003714, guid: f55dbd8ea76a94d5a95325f37acb2aa3, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f55dbd8ea76a94d5a95325f37acb2aa3, type: 3}
 --- !u!4 &1694663444 stripped
@@ -3134,7 +3158,7 @@ PrefabInstance:
     - target: {fileID: 6453407439859527536, guid: db8e7d7827b8649289caff6a526dad73, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     - target: {fileID: 7074562111321806430, guid: db8e7d7827b8649289caff6a526dad73, type: 3}
       propertyPath: m_Name
       value: car-2-1_Prefab
@@ -3207,6 +3231,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6124026531326700439, guid: db8e7d7827b8649289caff6a526dad73, type: 3}
   m_PrefabInstance: {fileID: 1721534427}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1732880867
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2031520947116808067, guid: aa20547dfc1c8104e9a4bb855c15ca97, type: 3}
+      propertyPath: m_Name
+      value: road1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056308423072114064, guid: aa20547dfc1c8104e9a4bb855c15ca97, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056308423072114064, guid: aa20547dfc1c8104e9a4bb855c15ca97, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056308423072114064, guid: aa20547dfc1c8104e9a4bb855c15ca97, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056308423072114064, guid: aa20547dfc1c8104e9a4bb855c15ca97, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056308423072114064, guid: aa20547dfc1c8104e9a4bb855c15ca97, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056308423072114064, guid: aa20547dfc1c8104e9a4bb855c15ca97, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056308423072114064, guid: aa20547dfc1c8104e9a4bb855c15ca97, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056308423072114064, guid: aa20547dfc1c8104e9a4bb855c15ca97, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056308423072114064, guid: aa20547dfc1c8104e9a4bb855c15ca97, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056308423072114064, guid: aa20547dfc1c8104e9a4bb855c15ca97, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056308423072114064, guid: aa20547dfc1c8104e9a4bb855c15ca97, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056308423072114064, guid: aa20547dfc1c8104e9a4bb855c15ca97, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3056308423072114064, guid: aa20547dfc1c8104e9a4bb855c15ca97, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aa20547dfc1c8104e9a4bb855c15ca97, type: 3}
 --- !u!1 &1756593020
 GameObject:
   m_ObjectHideFlags: 0
@@ -3275,104 +3364,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1791569200
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1791569204}
-  - component: {fileID: 1791569203}
-  - component: {fileID: 1791569202}
-  - component: {fileID: 1791569201}
-  m_Layer: 0
-  m_Name: Road
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!64 &1791569201
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791569200}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1791569202
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791569200}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 5473a6147c982c7438e275638d03fea0, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1791569203
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791569200}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1791569204
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1791569200}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.8, y: -0.51, z: 0}
-  m_LocalScale: {x: 15.38, y: 4.72, z: 4.72}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1816307906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3383,7 +3374,7 @@ PrefabInstance:
     - target: {fileID: 5201713507547706912, guid: 4992e7545462f4ab8907db63d97199b0, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     - target: {fileID: 7621657604627576330, guid: 4992e7545462f4ab8907db63d97199b0, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -3451,6 +3442,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7621657604627576330, guid: 4992e7545462f4ab8907db63d97199b0, type: 3}
   m_PrefabInstance: {fileID: 1816307906}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1845551591 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2031520947116808067, guid: aa20547dfc1c8104e9a4bb855c15ca97, type: 3}
+  m_PrefabInstance: {fileID: 1732880867}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1845551594
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845551591}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1846290505
 GameObject:
   m_ObjectHideFlags: 0
@@ -3544,7 +3556,7 @@ PrefabInstance:
     - target: {fileID: -7638522256284641061, guid: 446e3f7f9f2174ec3a84f90dee8e6d9e, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     - target: {fileID: 3002240810960631417, guid: 446e3f7f9f2174ec3a84f90dee8e6d9e, type: 3}
       propertyPath: m_Name
       value: car-6-2_Prefab (1)
@@ -3682,7 +3694,7 @@ PrefabInstance:
     - target: {fileID: 3813114036039003714, guid: f55dbd8ea76a94d5a95325f37acb2aa3, type: 3}
       propertyPath: DeathCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 547343578}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f55dbd8ea76a94d5a95325f37acb2aa3, type: 3}
 --- !u!4 &1966243767 stripped
