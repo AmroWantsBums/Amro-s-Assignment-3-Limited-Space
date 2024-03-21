@@ -5,7 +5,7 @@ using UnityEngine;
 public class PoliceMovement : MonoBehaviour
 {
     public float MovementSpeed;
-    public bool Forward = true;
+    private bool TimeToTurn = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,32 +14,20 @@ public class PoliceMovement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
-        if (Forward)
+    {
+        transform.Translate(1 * MovementSpeed * Time.deltaTime, 0, 0);
+        if (TimeToTurn)
         {
-            transform.Translate(1 * MovementSpeed * Time.deltaTime, 0, 0);
-        }
-        else
-        {
-            transform.Translate(-1 * MovementSpeed * Time.deltaTime, 0, 0);
+            transform.Rotate(0, 180, 0);
+            TimeToTurn = false;
         }
     }
 
     IEnumerator ChangeDirection()
     {
-        yield return new WaitForSeconds(12.4f);
+        yield return new WaitForSeconds(4f);
         Debug.Log("Its time");
-        if (Forward)
-        {
-            //transform.Rotate(0, 180, 0); 
-            Forward = false;
-            StartCoroutine(ChangeDirection());
-        }
-        else
-        {
-            //transform.Rotate(0, 0, 0);
-            Forward = true;
-            StartCoroutine(ChangeDirection());
-        }
+        TimeToTurn = true;
+        StartCoroutine(ChangeDirection());
     }
 }
